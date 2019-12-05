@@ -6,7 +6,7 @@ $(function() {
     $('#sidebar').css({"cssText" : "padding : 0 8px 0px 8px !important"});
 
     // 初期表示
-    var initial_string = "<table class=\"my-journal-table\"><tr><td>履歴が表示されます。</td></tr></table>"
+    var initial_string = "<table class=\"my-journal-table\"><tr><td>显示历史。</td></tr></table>"
     $('#sidebar').html(initial_string);
 
     // マウスを乗せたら発動
