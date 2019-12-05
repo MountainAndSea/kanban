@@ -12,7 +12,7 @@
   <% end %>
 </div>
 <!-- タイトル -->
-<h2><%= avatar(@user, :size => "24") %><%= @user.lastname %>小张的看板</h2>
+<h2><%= avatar(@user, :size => "24") %><%= @user.lastname %>的看板</h2>
 <!-- フォーム -->
 <form id="form1" action="" method="GET">
 <!-- 開閉パーツ -->
@@ -59,7 +59,7 @@
         <td>
           <select name="user_id">
             <% @all_users.each{|user| %>
-              <option value="<%= user.id %>" <% if @user_id.to_i == user.id then %> selected <% end %>><%= user.lastname %>さん</option>
+              <option value="<%= user.id %>" <% if @user_id.to_i == user.id then %> selected <% end %>><%= user.lastname %><%= user.firstname %></option>
             <% } %>
           </select>
         </td>
@@ -170,7 +170,7 @@
                 <hr>
                 <!-- 24時間以内に更新 -->
                 <% diff = (Time.now - issue.updated_on) / 3600 / 24 %>
-                <% if diff.to_i == 0 %><div style="float: right; font-size: smaller">更新</div><% end %><p><% if issue.assigned_to != nil %><%= issue.assigned_to.lastname %>さん<% else %>Not assigned<% end %></p>
+                <% if diff.to_i == 0 %><div style="float: right; font-size: smaller">更新</div><% end %><p><% if issue.assigned_to != nil %><%= issue.assigned_to.lastname %><%= issue.assigned_to.firstname %><% else %>Not assigned<% end %></p>
               </div>
             <% } %>
           </td>
