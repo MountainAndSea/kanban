@@ -57,7 +57,7 @@ class JournalController < ApplicationController
 
     # ヘッダ表示
     if !notes.blank? then
-      notes_string +="<p><b>最新の履歴</b></p>"
+      notes_string +="<p><b>历史记录</b></p>"
     end
 
     # ノートをTABLEで組む
