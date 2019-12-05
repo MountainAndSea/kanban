@@ -18,7 +18,7 @@ class Constants < ActiveRecord::Base
   # 4:フィードバック
   # 5:終了
   # 7:リリース待ち
-  DEFAULT_STATUS_FIELD_VALUE_ARRAY = [1,2,3,4,7,5]
+  DEFAULT_STATUS_FIELD_VALUE_ARRAY = [1,2,3,4,7,5,6]
 
   # WIP制限するフィールド
   WIP_COUNT_STATUS_FIELD = 2
