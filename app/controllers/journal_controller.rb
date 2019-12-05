@@ -35,7 +35,7 @@ class JournalController < ApplicationController
       notes_string += "</a>"
       notes_string += "　"
       notes_string += user.lastname
-      notes_string += "さん"
+      notes_string += user.firstname
       notes_string += "</th>"
       notes_string += "</tr>"
       notes_string += "<tr>"
@@ -72,7 +72,7 @@ class JournalController < ApplicationController
         notes_string += "</a>"
         notes_string += "　"
         notes_string += user.lastname
-        notes_string += "さん"
+        notes_string += user.firstname
         notes_string += "</th>"
         notes_string += "</tr>"
         notes_string += "<tr>"
@@ -85,10 +85,10 @@ class JournalController < ApplicationController
     }
 
     # コメント投稿フォーム
-    notes_string += "<p><b>コメント投稿</b></p>"
+    notes_string += "<p><b>备注</b></p>"
     notes_string += "<table class=\"my-comment-table\"><tr><td>"
     notes_string += "<textarea id=\"comment_area\" class=\"my-comment-textarea\" rows=\"5\"></textarea>"
-    notes_string += "<p><input type=\"button\" id=\"submit-journal-button\" value=\"送信\"></p>"
+    notes_string += "<p><input type=\"button\" id=\"submit-journal-button\" value=\"提交\"></p>"
     notes_string += "</td></tr></table>"
     
     # 返却

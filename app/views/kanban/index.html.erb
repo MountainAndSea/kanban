@@ -129,11 +129,11 @@
 </form>
 <!-- 更新ボタン・クリアボタン -->
 <p class="buttons">
-  <a href="#" onclick="$('#form1').submit(); return false;" class="icon icon-checked">適用</a>
+  <a href="#" onclick="$('#form1').submit(); return false;" class="icon icon-checked">应用</a>
   <% if @project_id.blank? == true then %>
-    <a class="icon icon-reload" href="/kanban?clear=1">クリア</a>
+    <a class="icon icon-reload" href="/kanban?clear=1">刷新</a>
   <% else %>
-    <a class="icon icon-reload" href="/kanban?clear=1&project_id=<%= @project_id %>">クリア</a>
+    <a class="icon icon-reload" href="/kanban?clear=1&project_id=<%= @project_id %>">刷新</a>
   <% end %>
 </p>
 <!-- フォーム -->
